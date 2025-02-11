@@ -1,0 +1,125 @@
+# Assignment: Git, GitHub, and VS Code Workflow
+
+## Objective
+By the end of this assignment, students should be able to:
+- Install and configure Git, GitHub, and VS Code.
+- Set up a GitHub repository and push code to it.
+- Create and manage branches in Git.
+- Use GitHub Actions to create and complete a task.
+- Submit a pull request for review and merge changes.
+
+---
+
+## Step 1: Install and Configure Git, GitHub, and VS Code
+
+### Install the necessary tools
+1. **Git:** Download and install Git from [git-scm.com](https://git-scm.com/downloads).
+2. **GitHub:** Create an account at [GitHub](https://github.com) if you don’t already have one.
+3. **VS Code:** Download and install [Visual Studio Code](https://code.visualstudio.com/).
+
+### Verify Git installation
+Open a terminal (Command Prompt, Git Bash, or Terminal) and run:
+
+&$#
+git --version
+&$#
+
+You should see the installed version of Git.
+
+---
+
+## Step 2: Configure Git with Your Credentials
+
+Set up your username and email for Git:
+
+&$#
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+&$#
+
+Verify the setup:
+
+&$#
+git config --list
+&$#
+
+📌 **Reference:** [Configuring Git](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git)
+
+---
+
+## Step 3: Create a New Repository on GitHub
+1. Go to [GitHub](https://github.com/) and log in.
+2. Click on **New Repository** (or navigate to [Create Repository](https://github.com/new)).
+3. Give the repository a name (e.g., `git-intro-assignment`).
+4. Check **Add a README file**.
+5. Click **Create Repository**.
+
+📌 **Reference:** [Creating a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+
+---
+
+## Step 4: Clone the Repository to Your Local Machine
+In VS Code or Terminal, navigate to a directory where you want to clone the repo:
+
+&$#
+git clone https://github.com/your-username/git-intro-assignment.git
+&$#
+
+Move into the project folder:
+
+&$#
+cd git-intro-assignment
+&$#
+
+📌 **Reference:** [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+---
+
+## Step 5: Create a Hello World Program and Commit It
+
+1. Open the repository in **VS Code**.
+2. Create a new file (e.g., `hello.py` for Python or `hello.js` for JavaScript).
+3. Add the following code:
+
+   **Python (`hello.py`):**
+   &$#
+   print("Hello, World!")
+   &$#
+
+   **JavaScript (`hello.js`):**
+   &$#
+   console.log("Hello, World!");
+   &$#
+
+4. Save the file.
+5. Open a terminal in VS Code and run:
+
+   &$#
+   git add .
+   git commit -m "Added Hello World program"
+   git push origin main
+   &$#
+
+📌 **Reference:** [Committing Changes](https://docs.github.com/en/get-started/using-git/saving-changes-with-commits)
+
+---
+
+## Step 6: Create a GitHub Project and Task
+1. Go to your repository on GitHub.
+2. Click on **Projects** → **New Project**.
+3. Select **Board** and name it **Git Learning**.
+4. Click **+ Add Item**, name it **Complete Git Workflow**, and **assign it to yourself**.
+
+📌 **Reference:** [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects)
+
+---
+
+## Step 7: Create a New Branch and Make Changes
+1. In the terminal, create and switch to a new branch:
+
+   &$#
+   git checkout -b feature-update
+   &$#
+
+2. Open `README.md` in VS Code and add a new line:
+
