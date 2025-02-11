@@ -123,7 +123,7 @@ Using either the github UI, the VS Code UI, or your local VS CODE terminal, comp
    git checkout -b feature-update
    ```
 
-2. Open or Create `README.md` in VS Code and add a new line:
+2. Open or Create `README.md` in the new branch, using VS Code, and add a new line:
 
 
 3. Save and commit your changes:
