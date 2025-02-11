@@ -5,7 +5,7 @@ By the end of this assignment, students should be able to:
 - Install and configure Git, GitHub, and VS Code.
 - Set up a GitHub repository and push code to it.
 - Create and manage branches in Git.
-- Use GitHub Actions to create and complete a task.
+- Use GitHub Projects to create and complete a task.
 - Submit a pull request for review and merge changes.
 
 ---
