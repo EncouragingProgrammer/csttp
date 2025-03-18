@@ -88,6 +88,49 @@ data = response.json()
 print(data)
 ```
 
+### How to Access Data with Python
+
+- **Current temperature**: `data['current']['temp']`
+- **Current weather description**: `data['current']['weather'][0]['description']`
+- **Hourly forecast temperature**: `data['hourly'][0]['temp']`
+- **Daily forecast temperature**: `data['daily'][0]['temp']['day']`
+
+### JavaScript Example
+
+Using `fetch`:
+
+```javascript
+const apiKey = 'YOUR_API_KEY';
+const lat = 33.44;
+const lon = -94.04;
+const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+    // Example: accessing current temperature
+    console.log('Current Temperature:', data.current.temp);
+    // Example: accessing weather description
+    console.log('Weather Description:', data.current.weather[0].description);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+```
+
+### How to Access Data in JavaScript:
+
+- **Current temperature**: `data.current.temp`
+- **Current weather description**: `data.current.weather[0].description`
+- **Hourly forecast temperature**: `data.hourly[0].temp`
+- **Daily forecast temperature**: `data.daily[0].temp.day`
+
 ### Simplified Example Response (condensed for readability)
 
 ```json
@@ -110,13 +153,6 @@ print(data)
 }
 ```
 *Note: This JSON response is simplified and condensed for readability. The actual API response will include more detailed and extensive data.*
-
-### How to Access Data
-
-- **Current temperature**: `data['current']['temp']`
-- **Current weather description**: `data['current']['weather'][0]['description']`
-- **Hourly forecast temperature**: `data['hourly'][0]['temp']`
-- **Daily forecast temperature**: `data['daily'][0]['temp']['day']`
 
 Using this structure, you can easily extract and use API response data in your application. For full documentation, visit the [OpenWeatherMap One Call API 3.0 page](https://openweathermap.org/api/one-call-3).
 
